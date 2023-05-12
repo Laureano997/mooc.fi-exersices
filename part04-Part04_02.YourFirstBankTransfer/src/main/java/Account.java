@@ -23,9 +23,10 @@ public class Account {
     public double balance() {
         return this.balance;
     }
-
+ 
+    
     @Override
     public String toString() {
-        return " imbecil " ;
+        return this.owner + " balance: " + this.balance;
     }
 }
