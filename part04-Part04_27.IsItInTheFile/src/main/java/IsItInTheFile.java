@@ -12,6 +12,26 @@ public class IsItInTheFile {
 
         System.out.println("Search for:");
         String searchedFor = scanner.nextLine();
-
+        try(Scanner sc = new Scanner(Paths.get(file))){
+            while(sc.hasNextLine()){
+                String row = sc.nextLine();
+                if(row.equals(searchedFor))
+                    searchedFor = "Found!";
+            } // end of while
+        
+        } // end of try 
+        catch(Exception e){
+        
+            System.out.println("Reading the file nonexistent.txt failed.");
+                    
+        } // end of catch
+        
+        if(searchedFor.equals("Found!")){
+            System.out.println("Found!");
+        }else{
+            System.out.println("Not found.");
+        }
+        
     }
+    
 }
