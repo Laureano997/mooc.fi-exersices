@@ -7,5 +7,6 @@ public class Main {
         Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
         Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
   
+        System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));
     }
 }
