@@ -19,6 +19,14 @@ public class Person {
         return height;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
     @Override
     public String toString() {
         return this.name + " (" + this.height + " cm)";
